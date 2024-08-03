@@ -1,0 +1,98 @@
+// 1_3. fonts.scss 설정하기
+                        
+//                             scss에 fonts.scss 파일은 다음과 같이 설정하겠습니다.
+//                             폰트는 웹폰트를 이용하여 작업하겠습니다.
+//                             넥슨고딕Lv1 폰트와 나눔스퀘어네오 폰트를 사용하여 제작할 것입니다. 
+//                             폰트는 해당 사이트에서 다운을 받아서, woff 또는 woff2 포맷으로 변경하여 사용하여야 합니다. 
+//                             폰트 파일은 fonts 폴더에 넣어놓고 연동하겠습니다.
+// 출처: https://webstoryboy.co.kr/1967 [WEBSTORYBOY:티스토리]@font-face {
+// 웹폰트(Web Fonts)는 웹 페이지에서 특정 폰트를 서버에서 다운로드하여 사용할 수 있게 해주는 기술입니다. 
+//                                 사용자 컴퓨터에 해당 폰트가 없더라도 다운로드 받아서 바로 사용할 수 있습니다.  
+                            
+
+                            
+//                                 웹 폰트 포맷은 웹 페이지에서 사용되는 폰트를 브라우저가 이해하고 렌더링할 수 있는 형식으로 변환하는 포맷입니다. 
+//                                 웹 페이지에서 특정 폰트를 사용하려면 해당 폰트를 사용자의 브라우저로 전달해야 하기 때문에, 이러한 웹 폰트 포맷이 필요합니다. 
+//                                 다양한 웹 폰트 포맷이 개발되었으며, 각각의 포맷은 특정한 용도와 기능을 가지고 있습니다.
+                            
+                            
+//                                 4가지 폰트를 사용해서 호환성을 높이는 것도 중요하지만, 현재는 인터넷 익스플로우 사용량과 용량을 생각해서 woff와 woff2를 사용하여 웹폰트를 만들었습니다.
+                            
+
+                            
+//                                 WOFF (Web Open Font Format): WOFF는 웹 페이지에서 사용하기 위해 최적화된 웹 폰트 포맷입니다. 압축률이 높아서 작은 파일 크기를 가지며, 빠른 로딩을 가능케 합니다. 주로 브라우저 호환성을 고려할 때 WOFF를 사용합니다.
+//                                 WOFF2 (Web Open Font Format 2): WOFF2는 WOFF의 업그레이드 버전으로, 더욱 효율적인 압축 기술을 사용하여 더 작은 파일 크기를 가집니다. WOFF2는 모던 브라우저에서 지원되며, 대부분의 경우 WOFF2를 사용하는 것이 좋습니다.
+//                                 TTF/OTF (TrueType/OpenType Font): TTF와 OTF는 트루타입 폰트와 오픈타입 폰트의 확장자입니다. 원래는 인쇄용 폰트를 위해 개발되었지만 웹에서도 사용됩니다. 하지만 TTF/OTF는 추가적인 압축이나 최적화 없이 사용되기 때문에 파일 크기가 크고 로딩 속도가 느릴 수 있습니다.
+//                                 EOT (Embedded OpenType): EOT 파일은 웹 페이지에서 사용하기 위해 개발된 폰트 포맷 중 하나입니다. 주로 Microsoft의 Internet Explorer 브라우저에서 사용되었습니다.
+                            
+                        
+                        
+                        
+//                             만약 폰트가 없다면 여기서 다운 받아서 사용하세요.
+//                             나눔스퀘어네오 : https://github.com/websfont/nanumSquareNeo
+//                             넥슨고딕Lv1 : https://github.com/websfont/nexonLv1
+// 출처: https://webstoryboy.co.kr/1967 [WEBSTORYBOY:티스토리]
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 100;
+    font-style: normal;
+    src: url("../../fonts/nexonLv1-Light.woff2") format("woff2"),
+         url("../../fonts/nexonLv1-Light.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fonts/nexonLv1-Regular.woff2") format("woff2"),
+         url("../../fonts/nexonLv1-Regular.woff") format("woff");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../fonts/nexonLv1-Bold.woff2") format("woff2"),
+         url("../../fonts/nexonLv1-Bold.woff") format("woff");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../../fonts/nanumSquareNeo-Light.woff2") format("woff2"),
+         url("../../fonts/nanumSquareNeo-Light.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fonts/nanumSquareNeo-Regular.woff2") format("woff2"),
+         url("../../fonts/nanumSquareNeo-Regular.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../fonts/nanumSquareNeo-Bold.woff2") format("woff2"),
+         url("../../fonts/nanumSquareNeo-Bold.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 800;
+    font-style: normal;
+    src: url("../../fonts/nanumSquareNeo-ExtraBold.woff2") format("woff2"),
+         url("../../fonts/nanumSquareNeo-ExtraBold.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+    font-style: normal;
+    src: url("../../fonts/nanumSquareNeo-Black.woff2") format("woff2"),
+         url("../../fonts/nanumSquareNeo-Black.woff") format("woff");
+    font-display: swap;
+}
